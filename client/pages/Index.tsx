@@ -10,36 +10,40 @@ import {
   Download,
   Code,
   Palette,
-  Smartphone
+  Smartphone,
+  MapPin,
+  Phone
 } from "lucide-react";
 
 export default function Index() {
   const skills = [
     { name: "React.js", category: "Frontend" },
     { name: "TypeScript", category: "Language" },
-    { name: "Node.js", category: "Backend" },
-    { name: "Tailwind CSS", category: "Styling" },
+    { name: "JavaScript", category: "Language" },
     { name: "Next.js", category: "Framework" },
-    { name: "MongoDB", category: "Database" }
+    { name: "MongoDB", category: "Database" },
+    { name: "MySQL", category: "Database" },
+    { name: "HTML/CSS", category: "Frontend" },
+    { name: "Node.js", category: "Backend" }
   ];
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with React, Node.js, and MongoDB",
-      tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=200&fit=crop"
+      title: "Personal Portfolio Website",
+      description: "Responsive portfolio website with animations showcasing personal details and projects",
+      tech: ["HTML", "CSS", "JavaScript", "GitHub Pages"],
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop"
     },
     {
-      title: "Task Management App",
-      description: "Collaborative task management with real-time updates",
-      tech: ["React", "Firebase", "Material-UI"],
+      title: "React Notes App",
+      description: "Feature-rich notes application with categorization and local storage",
+      tech: ["React.js", "LocalStorage", "Tailwind CSS", "Bootstrap"],
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=200&fit=crop"
     },
     {
-      title: "Weather Dashboard",
-      description: "Real-time weather app with interactive maps and forecasts",
-      tech: ["React", "API Integration", "Chart.js"],
+      title: "Weather App",
+      description: "Real-time weather application with OpenWeatherMap API integration",
+      tech: ["HTML", "CSS", "JavaScript", "API Integration"],
       image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=400&h=200&fit=crop"
     }
   ];
@@ -67,14 +71,29 @@ export default function Index() {
             </h1>
             
             <p className="mb-8 text-xl text-muted-foreground sm:text-2xl">
-              Full-Stack Developer & UI/UX Enthusiast
+              MERN Stack Developer & ReactJS Specialist
             </p>
             
-            <p className="mx-auto mb-12 max-w-2xl text-lg text-muted-foreground">
-              I craft beautiful, functional, and user-centered digital experiences. 
-              Specializing in React, Node.js, and modern web technologies to bring 
-              ideas to life.
+            <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground">
+              Versatile Full Stack Developer with a Bachelor's degree in Computer Science 
+              and strong proficiency in MERN stack technologies. Passionate about creating 
+              responsive and interactive web solutions with AI-enhanced productivity.
             </p>
+            
+            <div className="mb-8 flex flex-wrap justify-center gap-4 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <MapPin className="h-4 w-4" />
+                <span>Gorakhpur, Uttar Pradesh, India</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="h-4 w-4" />
+                <span>8112749161</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="h-4 w-4" />
+                <span>abhi9161.sharma@gmail.com</span>
+              </div>
+            </div>
             
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Link to="/contact">
@@ -83,25 +102,27 @@ export default function Index() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                <Download className="mr-2 h-4 w-4" />
-                Download Resume
+              <Button variant="outline" size="lg" className="w-full sm:w-auto" asChild>
+                <a href={`data:text/plain;charset=utf-8,${encodeURIComponent('Resume content would be here')}`} download="Abhishek_Sharma_Resume.txt">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download Resume
+                </a>
               </Button>
             </div>
             
             <div className="mt-12 flex justify-center gap-6">
               <Button variant="ghost" size="sm" asChild>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/AbhishekSharma" target="_blank" rel="noopener noreferrer">
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="sm" asChild>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com/in/abhishek-sharma" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="sm" asChild>
-                <a href="mailto:hello@abhisheksharma.dev">
+                <a href="mailto:abhi9161.sharma@gmail.com">
                   <Mail className="h-5 w-5" />
                 </a>
               </Button>
@@ -130,7 +151,7 @@ export default function Index() {
                 </div>
                 <h3 className="mb-2 text-xl font-semibold">Frontend Development</h3>
                 <p className="text-muted-foreground">
-                  Creating responsive, interactive user interfaces with React, TypeScript, and modern CSS frameworks.
+                  Expert in React.js, Next.js, TypeScript, and responsive design. Creating interactive user interfaces with modern frameworks.
                 </p>
               </CardContent>
             </Card>
@@ -144,7 +165,7 @@ export default function Index() {
                 </div>
                 <h3 className="mb-2 text-xl font-semibold">UI/UX Design</h3>
                 <p className="text-muted-foreground">
-                  Designing intuitive and beautiful user experiences that delight users and drive engagement.
+                  Designing intuitive and beautiful user experiences that delight users and drive engagement using modern design tools.
                 </p>
               </CardContent>
             </Card>
@@ -156,9 +177,9 @@ export default function Index() {
                     <Smartphone className="h-6 w-6 text-primary" />
                   </div>
                 </div>
-                <h3 className="mb-2 text-xl font-semibold">Full-Stack Development</h3>
+                <h3 className="mb-2 text-xl font-semibold">MERN Stack Development</h3>
                 <p className="text-muted-foreground">
-                  Building complete web applications from database design to deployment and everything in between.
+                  Full-stack development using MongoDB, Express.js, React.js, and Node.js. Experience with scalable application architecture.
                 </p>
               </CardContent>
             </Card>
@@ -212,8 +233,34 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Skills Preview */}
+      {/* Current Experience */}
       <section className="py-20">
+        <div className="container px-4">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="mb-4 text-3xl font-bold tracking-tight">Current Experience</h2>
+            <p className="mb-12 text-lg text-muted-foreground">
+              Currently working as a ReactJS/NextJS Developer
+            </p>
+          </div>
+          
+          <div className="mx-auto max-w-4xl">
+            <Card className="p-8">
+              <div className="text-center">
+                <h3 className="mb-2 text-2xl font-bold">ReactJS/NextJS Developer</h3>
+                <p className="mb-4 text-lg text-primary">CODER'S BOTIQUE</p>
+                <p className="mb-6 text-muted-foreground">May 2025 - Present</p>
+                <p className="text-muted-foreground">
+                  Collaborating with design teams to transform wireframes into functional web applications. 
+                  Optimizing web performance and ensuring seamless user experiences across various devices and browsers.
+                </p>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Preview */}
+      <section className="bg-muted/30 py-20">
         <div className="container px-4">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="mb-4 text-3xl font-bold tracking-tight">Skills & Technologies</h2>
