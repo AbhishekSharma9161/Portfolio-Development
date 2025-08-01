@@ -13,46 +13,82 @@ import {
   Coffee,
   Music,
   Camera,
-  Gamepad2
+  Gamepad2,
+  Building,
+  Code2
 } from "lucide-react";
 
 export default function About() {
   const education = [
     {
-      degree: "Bachelor of Computer Science",
-      institution: "University of Technology",
-      year: "2018-2022",
-      description: "Focused on software engineering, data structures, and web development"
-    },
-    {
-      degree: "Full-Stack Web Development Bootcamp",
-      institution: "Tech Academy",
-      year: "2022",
-      description: "Intensive program covering modern web technologies and frameworks"
+      degree: "B.Tech in Computer Sciences",
+      institution: "SRM Institute of Science and Technology",
+      year: "May 2020 - May 2024",
+      gpa: "8.58 CGPA",
+      description: "Specialized in software engineering, data structures, algorithms, and modern web development technologies"
     }
   ];
 
-  const certifications = [
-    "React Developer Certification",
-    "AWS Cloud Practitioner",
-    "Google Analytics Certified",
-    "MongoDB Developer"
+  const workExperience = [
+    {
+      title: "ReactJS/NextJS Developer",
+      company: "CODER'S BOTIQUE",
+      period: "May 2025 - Present",
+      type: "Full-time",
+      responsibilities: [
+        "Collaborated with design teams to transform wireframes and mock-ups into functional, user-friendly web pages",
+        "Developed user interfaces using HTML, CSS, and JavaScript to build interactive and responsive designs",
+        "Optimized web performance by enhancing applications for maximum speed and scalability"
+      ]
+    },
+    {
+      title: "MERN Stack Developer Intern",
+      company: "Cuvette",
+      period: "Jul 2024 - Mar 2025",
+      type: "Remote Internship",
+      responsibilities: [
+        "Developed and optimized full-stack web applications using MongoDB, Express.js, React.js, and Node.js",
+        "Enhanced application performance, resolved bugs, and gained hands-on experience with Git and deployment",
+        "Collaborated with cross-functional teams to design responsive user interfaces and ensure seamless integration"
+      ]
+    },
+    {
+      title: "Front End Developer",
+      company: "Internite Corporation",
+      period: "2024",
+      type: "Internship",
+      responsibilities: [
+        "Created responsive designs using HTML, CSS, and JavaScript with animations and transitions",
+        "Developed two complete websites using modern web technologies",
+        "Built a Portfolio Website and Interactive Quiz Application"
+      ]
+    }
   ];
 
-  const personalInterests = [
-    { name: "Coffee Brewing", icon: Coffee },
-    { name: "Music Production", icon: Music },
-    { name: "Photography", icon: Camera },
-    { name: "Gaming", icon: Gamepad2 }
+  const technicalSkills = [
+    { category: "Programming Languages", skills: ["C/C++", "JavaScript"] },
+    { category: "Frontend Development", skills: ["HTML", "CSS", "ReactJS", "TypeScript", "Next.js"] },
+    { category: "Database Management", skills: ["MySQL", "MongoDB"] },
+    { category: "Version Control & Workflow", skills: ["GitLab", "GitHub"] },
+    { category: "Design Tools", skills: ["Figma"] }
   ];
 
   const coreSkills = [
-    { name: "JavaScript/TypeScript", level: 95 },
-    { name: "React & Next.js", level: 90 },
-    { name: "Node.js & Express", level: 85 },
-    { name: "UI/UX Design", level: 80 },
-    { name: "Database Design", level: 75 },
-    { name: "DevOps & Deployment", level: 70 }
+    { name: "JavaScript/TypeScript", level: 90 },
+    { name: "React & Next.js", level: 95 },
+    { name: "HTML/CSS", level: 95 },
+    { name: "Node.js & Express", level: 80 },
+    { name: "MongoDB", level: 75 },
+    { name: "MySQL", level: 75 },
+    { name: "Git/GitHub", level: 85 },
+    { name: "Figma", level: 70 }
+  ];
+
+  const personalInterests = [
+    { name: "AI Tools", icon: Code2 },
+    { name: "Web Technologies", icon: Coffee },
+    { name: "Open Source", icon: Music },
+    { name: "Problem Solving", icon: Gamepad2 }
   ];
 
   return (
@@ -67,24 +103,33 @@ export default function About() {
                   About Me
                 </h1>
                 <p className="mb-6 text-lg text-muted-foreground">
-                  I'm a passionate full-stack developer with over 3 years of experience 
-                  creating digital experiences that matter. Based in India, I specialize 
-                  in building modern web applications that are both beautiful and functional.
+                  I'm a versatile Full Stack Developer with a Bachelor's degree in Computer Science 
+                  from SRM Institute of Science and Technology. Currently working as a ReactJS/NextJS 
+                  Developer at CODER'S BOTIQUE, I specialize in creating responsive and interactive web solutions.
+                </p>
+                <p className="mb-6 text-lg text-muted-foreground">
+                  My expertise spans the MERN stack with strong proficiency in frontend technologies 
+                  including React.js, Next.js, TypeScript, and modern CSS frameworks. I'm passionate 
+                  about leveraging AI tools like Claude, ChatGPT, and Cursor AI to enhance productivity 
+                  and deliver innovative solutions.
                 </p>
                 <p className="mb-8 text-lg text-muted-foreground">
-                  My journey in tech started with curiosity about how websites work, 
-                  and it has evolved into a career focused on solving complex problems 
-                  through clean, efficient code and thoughtful design.
+                  I thrive in collaborative environments and enjoy transforming complex requirements 
+                  into user-friendly, scalable applications that make a real impact.
                 </p>
                 
                 <div className="mb-8 flex flex-wrap gap-4">
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <MapPin className="h-4 w-4" />
-                    <span>Mumbai, India</span>
+                    <span>Gorakhpur, Uttar Pradesh, India</span>
                   </div>
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Calendar className="h-4 w-4" />
-                    <span>3+ Years Experience</span>
+                    <span>2+ Years Experience</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-muted-foreground">
+                    <GraduationCap className="h-4 w-4" />
+                    <span>B.Tech Graduate</span>
                   </div>
                 </div>
                 
@@ -113,7 +158,7 @@ export default function About() {
                   </div>
                   <div className="absolute -bottom-4 -right-4 rounded-xl bg-card p-4 shadow-lg">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">50+</div>
+                      <div className="text-2xl font-bold text-primary">3+</div>
                       <div className="text-sm text-muted-foreground">Projects</div>
                     </div>
                   </div>
@@ -124,12 +169,53 @@ export default function About() {
         </div>
       </section>
 
-      {/* Core Skills */}
+      {/* Work Experience */}
       <section className="py-20">
         <div className="container px-4">
           <div className="mx-auto max-w-4xl">
             <h2 className="mb-12 text-center text-3xl font-bold tracking-tight">
-              Core Skills & Expertise
+              Work Experience
+            </h2>
+            
+            <div className="space-y-8">
+              {workExperience.map((job, index) => (
+                <Card key={index} className="overflow-hidden">
+                  <CardContent className="p-6">
+                    <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                      <div>
+                        <h3 className="text-xl font-semibold">{job.title}</h3>
+                        <div className="flex items-center gap-2 text-primary">
+                          <Building className="h-4 w-4" />
+                          <span className="font-medium">{job.company}</span>
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <Badge variant="secondary">{job.type}</Badge>
+                        <p className="text-sm text-muted-foreground">{job.period}</p>
+                      </div>
+                    </div>
+                    <ul className="space-y-2 text-muted-foreground">
+                      {job.responsibilities.map((responsibility, respIndex) => (
+                        <li key={respIndex} className="flex items-start gap-2">
+                          <div className="mt-2 h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0"></div>
+                          <span>{responsibility}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Skills */}
+      <section className="bg-muted/30 py-20">
+        <div className="container px-4">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="mb-12 text-center text-3xl font-bold tracking-tight">
+              Core Skills & Proficiency
             </h2>
             
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -147,15 +233,43 @@ export default function About() {
         </div>
       </section>
 
+      {/* Technical Skills */}
+      <section className="py-20">
+        <div className="container px-4">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="mb-12 text-center text-3xl font-bold tracking-tight">
+              Technical Skills
+            </h2>
+            
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {technicalSkills.map((category, index) => (
+                <Card key={index}>
+                  <CardContent className="p-6">
+                    <h3 className="mb-4 font-semibold text-lg">{category.category}</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {category.skills.map((skill, skillIndex) => (
+                        <Badge key={skillIndex} variant="outline" className="text-xs">
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Education */}
       <section className="bg-muted/30 py-20">
         <div className="container px-4">
           <div className="mx-auto max-w-4xl">
             <h2 className="mb-12 text-center text-3xl font-bold tracking-tight">
-              Education & Learning
+              Education
             </h2>
             
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-6">
               {education.map((edu, index) => (
                 <Card key={index}>
                   <CardContent className="p-6">
@@ -164,9 +278,12 @@ export default function About() {
                         <GraduationCap className="h-5 w-5 text-primary" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-semibold">{edu.degree}</h3>
-                        <p className="text-sm text-muted-foreground">{edu.institution}</p>
-                        <p className="text-sm text-muted-foreground">{edu.year}</p>
+                        <h3 className="font-semibold text-lg">{edu.degree}</h3>
+                        <p className="text-primary font-medium">{edu.institution}</p>
+                        <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mt-1">
+                          <span>{edu.year}</span>
+                          <span className="font-medium text-primary">{edu.gpa}</span>
+                        </div>
                       </div>
                     </div>
                     <p className="text-muted-foreground">{edu.description}</p>
@@ -178,35 +295,15 @@ export default function About() {
         </div>
       </section>
 
-      {/* Certifications */}
+      {/* Personal Interests */}
       <section className="py-20">
         <div className="container px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-12 text-center text-3xl font-bold tracking-tight">
-              Certifications & Achievements
-            </h2>
-            
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              {certifications.map((cert, index) => (
-                <div key={index} className="flex items-center gap-3 rounded-lg border p-4">
-                  <Award className="h-5 w-5 text-primary" />
-                  <span className="font-medium">{cert}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Personal Interests */}
-      <section className="bg-muted/30 py-20">
-        <div className="container px-4">
-          <div className="mx-auto max-w-4xl">
             <h2 className="mb-6 text-center text-3xl font-bold tracking-tight">
-              Beyond Code
+              Beyond Development
             </h2>
             <p className="mb-12 text-center text-lg text-muted-foreground">
-              When I'm not coding, you'll find me exploring these passions
+              Areas of interest that fuel my passion for technology
             </p>
             
             <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
@@ -231,17 +328,17 @@ export default function About() {
       </section>
 
       {/* Philosophy */}
-      <section className="py-20">
+      <section className="bg-muted/30 py-20">
         <div className="container px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-6 text-3xl font-bold tracking-tight">
               My Development Philosophy
             </h2>
             <blockquote className="text-xl italic text-muted-foreground">
-              "Great software is not just about clean code—it's about understanding 
-              people, solving real problems, and creating experiences that matter. 
-              I believe in building with empathy, learning continuously, and always 
-              keeping the user at the center of every decision."
+              "Technology should solve real problems and enhance human experiences. 
+              I believe in writing clean, maintainable code, embracing continuous learning, 
+              and leveraging AI tools to amplify productivity while keeping the user experience 
+              at the heart of every solution."
             </blockquote>
             <p className="mt-6 font-medium">— Abhishek Sharma</p>
           </div>
@@ -253,10 +350,10 @@ export default function About() {
         <div className="container px-4">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="mb-4 text-3xl font-bold tracking-tight">
-              Ready to Start a Project?
+              Ready to Collaborate?
             </h2>
             <p className="mb-8 text-lg opacity-90">
-              I'm always excited to work on new challenges and collaborate with amazing people.
+              I'm always excited to work on innovative projects and collaborate with amazing teams.
             </p>
             <Button variant="secondary" size="lg" asChild>
               <Link to="/contact">
