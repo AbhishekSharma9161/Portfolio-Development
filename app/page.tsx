@@ -142,10 +142,12 @@ export default function HomePage() {
             
             {/* Main Heading */}
             <h1 className="mb-8 text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
-              I help founders turn ideas
+              I help to turn{" "}
+              <span style={{color: "rgb(230, 214, 43)"}}>ideas</span>
               <br />
-              into seamless{" "}
-              <span className="italic text-purple-400">digital experiences</span>
+              into{" "}
+              <span style={{color: "rgb(251, 172, 172)"}}>seamless</span>
+              <span className="italic text-purple-400">&nbsp;digital experiences</span>
             </h1>
             
             {/* Introduction */}
