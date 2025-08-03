@@ -112,7 +112,7 @@ export default function CommandPalette() {
         variant="outline"
         size="sm"
         onClick={() => setIsOpen(true)}
-        className="curved-element bg-white/5 border-white/20 text-white hover:bg-white/10 flex items-center gap-2"
+        className="curved-element bg-white/5 border-white/20 text-white hover:bg-white/10 flex items-center gap-2 mt-2 -ml-0.5"
       >
         <Command className="h-4 w-4" />
       </Button>
