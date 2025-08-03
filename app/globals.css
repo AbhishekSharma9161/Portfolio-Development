@@ -103,15 +103,30 @@
   .curved-bg {
     background: radial-gradient(ellipse at bottom, rgba(147, 51, 234, 0.15), transparent 70%);
   }
-  
+
   .curved-element {
     border-radius: 2rem;
     background: linear-gradient(135deg, rgba(147, 51, 234, 0.1), rgba(59, 130, 246, 0.05));
   }
-  
+
   .glass-effect {
     backdrop-filter: blur(10px);
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .stars-canvas {
+    pointer-events: none;
+  }
+}
+
+@layer base {
+  .stars-effect {
+    animation: twinkle 4s ease-in-out infinite alternate;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
   }
 }
