@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import CommandPalette from "@/components/CommandPalette";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 
 const Navigation = () => {
