@@ -171,10 +171,15 @@ export default function HomePage() {
             
             {/* CTA Buttons */}
             <div className="flex flex-col gap-4 sm:flex-row sm:justify-center mb-12">
-              <Button size="lg" className="curved-element bg-white text-black hover:bg-gray-100" asChild>
-                <Link href="/contact">
+              <Button size="lg" className="curved-element bg-white text-black hover:bg-gray-100 group relative overflow-hidden" asChild>
+                <Link href="/contact" className="flex items-center">
                   Let's Connect
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <div className="relative ml-2">
+                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <ArrowRight className="h-4 w-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-[-16px] group-hover:translate-x-0" />
+                    </div>
+                  </div>
                 </Link>
               </Button>
               <Button 
