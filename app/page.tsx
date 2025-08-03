@@ -174,8 +174,8 @@ export default function HomePage() {
               <Button size="lg" className="curved-element bg-transparent border border-white/20 text-white hover:bg-white hover:text-black group relative" asChild>
                 <Link href="/contact" className="flex items-center">
                   Let's Connect
-                  <div className="relative ml-2 bg-white text-black rounded-full p-1">
-                    <ArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1" />
+                  <div className="relative ml-2 bg-white text-black rounded-full p-1 flex flex-col">
+                    <ArrowRight className="flex h-[18px] w-[25px] transition-transform duration-300 group-hover:translate-x-1 flex-col justify-end items-start gap-[1px] ml-[1px]" />
                   </div>
                 </Link>
               </Button>
