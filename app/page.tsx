@@ -64,13 +64,20 @@ export default function HomePage() {
     <div className="min-h-screen overflow-hidden">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
-        {/* Subtle background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-background/95"></div>
+        {/* Top blur background */}
+        <div aria-hidden="true" className="absolute top-1/2 left-1/2 z-0 h-[500px] w-[800px] -translate-x-1/2 -translate-y-1/2 bg-purple-300/75 blur-[150px] dark:bg-[#0b0218]"></div>
 
-        {/* Curved bottom element - clean and simple */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-40">
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-t from-purple-500/10 via-purple-500/5 to-transparent rounded-t-[50%] blur-3xl"></div>
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4/5 h-32 bg-gradient-to-t from-background via-background/80 to-transparent rounded-t-full"></div>
+        {/* Canvas background with radial mask */}
+        <div className="absolute inset-0 bottom-0 z-0 size-full [mask-image:radial-gradient(100%_50%,white,transparent_90%)]">
+        </div>
+
+        {/* Bottom curved background elements */}
+        <div className="absolute bottom-0 left-1/2 z-0 h-60 w-full -translate-x-1/2">
+          <div className="absolute bottom-0 left-1/2 z-0 h-[400px] w-[1200px] -translate-x-1/2 transform overflow-hidden" style={{maskImage: "linear-gradient(to right, transparent, black 30%, black 70%, transparent)"}}>
+            <div className="absolute bottom-[167px] left-1/2 h-[111px] w-[787px] -translate-x-1/2 transform overflow-hidden bg-[radial-gradient(50%_50%_at_50%_50%,#5506ba_0%,rgba(10,10,10,0)_100%)] blur-[57px]"></div>
+            <div className="absolute right-[-432px] bottom-[-753px] left-[-454px] h-[955px] rounded-[100%] bg-gradient-to-b from-black to-transparent dark:from-white"></div>
+            <div className="absolute right-[-510px] bottom-[-759px] left-[-532px] aspect-[2.346820809248555/1] h-[956px] rounded-[100%] shadow-[inset_0_2px_20px_#fff,0_-10px_50px_1px_#ffffff7d] dark:bg-black"></div>
+          </div>
         </div>
         
         <div className="container relative z-10 px-4">
