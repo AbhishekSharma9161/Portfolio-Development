@@ -30,7 +30,9 @@ const Navigation = () => {
   useEffect(() => {
     const updateIndicator = () => {
       if (navRef.current) {
-        const activeItem = navRef.current.querySelector('[data-active="true"]') as HTMLElement;
+        const activeItem = navRef.current.querySelector(
+          '[data-active="true"]',
+        ) as HTMLElement;
         if (activeItem) {
           const navContainer = navRef.current;
           const containerRect = navContainer.getBoundingClientRect();
@@ -45,8 +47,8 @@ const Navigation = () => {
     };
 
     updateIndicator();
-    window.addEventListener('resize', updateIndicator);
-    return () => window.removeEventListener('resize', updateIndicator);
+    window.addEventListener("resize", updateIndicator);
+    return () => window.removeEventListener("resize", updateIndicator);
   }, [pathname]);
 
   return (
@@ -87,9 +89,7 @@ const Navigation = () => {
                 href={item.path}
                 data-active={isActivePath(item.path)}
                 className={`relative z-10 rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 hover:text-white ${
-                  isActivePath(item.path)
-                    ? "text-white"
-                    : "text-gray-300"
+                  isActivePath(item.path) ? "text-white" : "text-gray-300"
                 }`}
               >
                 {item.name}
