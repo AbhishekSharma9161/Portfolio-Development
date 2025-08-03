@@ -143,7 +143,17 @@ export default function HomePage() {
             {/* Main Heading */}
             <h1 className="mb-8 text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
               I help to turn{" "}
-              <span style={{color: "rgb(230, 214, 43)"}}>ideas</span>
+              <span
+                style={{
+                  backgroundImage: "linear-gradient(to right, rgb(236, 11, 200), rgb(91, 178, 246), rgb(246, 196, 54))",
+                  backgroundClip: "text",
+                  WebkitBackgroundClip: "text",
+                  color: "transparent",
+                  WebkitTextFillColor: "transparent"
+                }}
+              >
+                ideas
+              </span>
               <br />
               into{" "}
               <span style={{color: "rgb(251, 172, 172)"}}>seamless</span>
