@@ -153,14 +153,18 @@ export default function HomePage() {
             {/* Introduction */}
             <div className="mb-12 flex items-center justify-center gap-4 text-lg text-gray-300 sm:text-xl">
               <span>Hello, I'm Abhishek Sharma</span>
-              <div className="h-12 w-12 overflow-hidden rounded-full border-2 border-purple-500">
+              <div className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-purple-500 group cursor-pointer">
                 <Image
                   src="https://cdn.builder.io/api/v1/image/assets%2Fd209ae98c41f479fa6b7a3b45e18a30b%2F9d20c290ee0e441cb68eb28acc5fe13d"
                   alt="Abhishek Sharma"
                   width={48}
                   height={48}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110 group-hover:translate-x-1"
                 />
+                {/* Emoji overlay on hover */}
+                <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-xl">👋</span>
+                </div>
               </div>
               <span>a Full Stack Developer</span>
             </div>
