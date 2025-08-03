@@ -30,11 +30,11 @@ const Navigation = () => {
       <div className="container flex h-16 items-center justify-between px-4 py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
-          <div className="flex h-10 w-10 items-center justify-center mt-4 ml-6">
+          <div className="flex h-12 w-12 items-center justify-center mt-4 ml-6">
             <img
               src="/assets/logo.webp"
               alt="Abhishek Sharma Logo"
-              className="h-10 w-10 object-contain rounded-lg"
+              className="h-12 w-12 object-contain rounded-lg"
             />
           </div>
         </Link>
