@@ -70,12 +70,7 @@ export default function HomePage() {
 
         {/* Canvas background with radial mask and stars */}
         <div id="_r_1s_" className="absolute inset-0 bottom-0 z-0 size-full [mask-image:radial-gradient(100%_50%,white,transparent_90%)]">
-          <canvas
-            data-generated="true"
-            style={{width: "100% !important", height: "100% !important"}}
-            aria-hidden="true"
-            className="stars-canvas"
-          />
+          <StarsBackground />
         </div>
 
         {/* Bottom curved background elements */}
