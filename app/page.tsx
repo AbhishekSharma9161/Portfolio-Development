@@ -67,8 +67,14 @@ export default function HomePage() {
         {/* Top blur background */}
         <div aria-hidden="true" className="absolute top-1/2 left-1/2 z-0 h-[500px] w-[800px] -translate-x-1/2 -translate-y-1/2 bg-purple-300/75 blur-[150px] dark:bg-[#0b0218]"></div>
 
-        {/* Canvas background with radial mask */}
-        <div className="absolute inset-0 bottom-0 z-0 size-full [mask-image:radial-gradient(100%_50%,white,transparent_90%)]">
+        {/* Canvas background with radial mask and stars */}
+        <div id="_r_1s_" className="absolute inset-0 bottom-0 z-0 size-full [mask-image:radial-gradient(100%_50%,white,transparent_90%)]">
+          <canvas
+            data-generated="true"
+            style={{width: "100% !important", height: "100% !important"}}
+            aria-hidden="true"
+            className="stars-canvas"
+          />
         </div>
 
         {/* Bottom curved background elements */}
