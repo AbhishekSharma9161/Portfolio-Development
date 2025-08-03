@@ -27,6 +27,28 @@ const Navigation = () => {
     return false;
   };
 
+  useEffect(() => {
+    const updateIndicator = () => {
+      if (navRef.current) {
+        const activeItem = navRef.current.querySelector('[data-active="true"]') as HTMLElement;
+        if (activeItem) {
+          const navContainer = navRef.current;
+          const containerRect = navContainer.getBoundingClientRect();
+          const activeRect = activeItem.getBoundingClientRect();
+
+          setIndicatorStyle({
+            left: activeRect.left - containerRect.left,
+            width: activeRect.width,
+          });
+        }
+      }
+    };
+
+    updateIndicator();
+    window.addEventListener('resize', updateIndicator);
+    return () => window.removeEventListener('resize', updateIndicator);
+  }, [pathname]);
+
   return (
     <nav className="fixed top-0 z-50 w-full">
       <div className="container flex h-16 items-center justify-between px-4 py-4">
