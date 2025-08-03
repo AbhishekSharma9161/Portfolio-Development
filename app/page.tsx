@@ -154,8 +154,8 @@ export default function HomePage() {
             <div className="mb-12 flex items-center justify-center gap-4 text-lg text-gray-300 sm:text-xl">
               <span>Hello, I'm Abhishek Sharma</span>
               <div className="h-12 w-12 overflow-hidden rounded-full border-2 border-purple-500">
-                <Image 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
+                <Image
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fd209ae98c41f479fa6b7a3b45e18a30b%2F9d20c290ee0e441cb68eb28acc5fe13d"
                   alt="Abhishek Sharma"
                   width={48}
                   height={48}
