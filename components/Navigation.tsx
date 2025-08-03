@@ -37,7 +37,7 @@ const Navigation = () => {
 
         {/* Desktop Navigation - Centered with glass effect */}
         <div className="hidden md:flex">
-          <div className="glass-effect curved-element flex items-center space-x-1 px-6 py-2">
+          <div className="glass-effect curved-element flex items-center space-x-1 px-6 py-2 mt-[15px]">
             {navItems.map((item) => (
               <Link
                 key={item.path}
