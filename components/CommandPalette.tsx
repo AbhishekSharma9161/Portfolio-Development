@@ -115,10 +115,6 @@ export default function CommandPalette() {
         className="curved-element bg-white/5 border-white/20 text-white hover:bg-white/10 flex items-center gap-2"
       >
         <Command className="h-4 w-4" />
-        <span className="hidden sm:inline">Search</span>
-        <Badge variant="secondary" className="bg-white/10 text-xs text-gray-300 border-0">
-          ⌘K
-        </Badge>
       </Button>
     );
   }
