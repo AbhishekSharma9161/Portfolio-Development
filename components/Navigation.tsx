@@ -54,11 +54,9 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Book a Call Button */}
+        {/* Command Palette Button */}
         <div className="hidden md:flex">
-          <Button asChild className="curved-element bg-white/10 hover:bg-white/20 text-white border-white/20">
-            <Link href="/contact">Book a Call</Link>
-          </Button>
+          <CommandPalette />
         </div>
 
         {/* Mobile menu button */}
