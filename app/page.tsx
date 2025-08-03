@@ -58,7 +58,49 @@ export default function HomePage() {
   ];
 
   const copyEmail = () => {
-    navigator.clipboard.writeText("abhi9161.sharma@gmail.com");
+    const email = "abhi9161.sharma@gmail.com";
+
+    // Try modern clipboard API first
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(email).then(() => {
+        // Success - could add toast notification here
+        console.log('Email copied to clipboard');
+      }).catch(() => {
+        // Fallback if clipboard API fails
+        fallbackCopyTextToClipboard(email);
+      });
+    } else {
+      // Fallback for older browsers or insecure contexts
+      fallbackCopyTextToClipboard(email);
+    }
+  };
+
+  const fallbackCopyTextToClipboard = (text: string) => {
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+
+    // Avoid scrolling to bottom
+    textArea.style.top = "0";
+    textArea.style.left = "0";
+    textArea.style.position = "fixed";
+    textArea.style.opacity = "0";
+
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+      const successful = document.execCommand('copy');
+      if (successful) {
+        console.log('Email copied to clipboard (fallback)');
+      } else {
+        console.log('Unable to copy email');
+      }
+    } catch (err) {
+      console.error('Fallback: Could not copy text', err);
+    }
+
+    document.body.removeChild(textArea);
   };
 
   return (
