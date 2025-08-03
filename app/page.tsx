@@ -3,13 +3,14 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import StarsBackground from "@/components/StarsBackground";
 import Link from "next/link";
 import Image from "next/image";
-import { 
-  ArrowRight, 
-  Github, 
-  Linkedin, 
-  Mail, 
+import {
+  ArrowRight,
+  Github,
+  Linkedin,
+  Mail,
   Download,
   Code,
   Palette,
