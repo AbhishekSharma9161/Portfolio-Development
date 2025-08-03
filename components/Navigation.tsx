@@ -65,15 +65,31 @@ const Navigation = () => {
 
         {/* Desktop Navigation - Centered with glass effect */}
         <div className="hidden md:flex">
-          <div className="glass-effect curved-element flex items-center space-x-1 px-6 py-2 mt-[15px]">
+          <div
+            ref={navRef}
+            className="glass-effect curved-element flex items-center space-x-1 px-6 py-2 mt-[15px] relative"
+          >
+            {/* Sliding white light indicator */}
+            <div
+              className="absolute top-2 bottom-2 rounded-full bg-gradient-to-r from-white/20 via-white/30 to-white/20 shadow-lg transition-all duration-300 ease-out"
+              style={{
+                left: indicatorStyle.left,
+                width: indicatorStyle.width,
+                opacity: indicatorStyle.width > 0 ? 1 : 0,
+              }}
+            >
+              <div className="absolute inset-0 rounded-full bg-white/10 animate-pulse" />
+            </div>
+
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 href={item.path}
-                className={`rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 hover:bg-white/10 ${
+                data-active={isActivePath(item.path)}
+                className={`relative z-10 rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 hover:text-white ${
                   isActivePath(item.path)
-                    ? "bg-white/10 text-white"
-                    : "text-gray-300 hover:text-white"
+                    ? "text-white"
+                    : "text-gray-300"
                 }`}
               >
                 {item.name}
