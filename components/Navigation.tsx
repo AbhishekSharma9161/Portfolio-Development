@@ -10,6 +10,8 @@ import { Menu, X } from "lucide-react";
 const Navigation = () => {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
+  const navRef = useRef<HTMLDivElement>(null);
 
   const navItems = [
     { name: "Home", path: "/" },
