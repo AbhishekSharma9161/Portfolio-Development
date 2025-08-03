@@ -30,7 +30,7 @@ const Navigation = () => {
       <div className="container flex h-16 items-center justify-between px-4 py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-primary to-purple-500 text-primary-foreground">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-primary to-purple-500 text-primary-foreground mt-4 ml-6">
             <span className="text-lg font-bold">AS</span>
           </div>
         </Link>
